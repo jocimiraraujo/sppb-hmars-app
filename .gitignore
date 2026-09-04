@@ -1,0 +1,16 @@
+# Credenciais sensíveis — NUNCA versionar
+.streamlit/secrets.toml
+*.json
+
+# Ambiente Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Streamlit
+.streamlit/
+
+# Sistema
+.DS_Store
+Thumbs.db
