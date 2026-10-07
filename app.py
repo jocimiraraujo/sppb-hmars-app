@@ -66,13 +66,17 @@ aba_aplicar, aba_dashboard = st.tabs(["Aplicar teste", "Dashboard"])
 
 with aba_aplicar:
     st.subheader("Identificação")
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
         id_paciente = st.text_input("ID do paciente (prontuário)", key="id_paciente")
     with col2:
-        data_avaliacao = st.date_input("Data da avaliação")
+        sexo = st.radio("Escolha o sexo:",("F", "M"), index=None)
     with col3:
-        avaliador = st.text_input("Avaliador (iniciais)")
+        idade = st.number_input("Digite a idade:", min_value=0, max_value=120, step=1, value=None)
+    with col4:
+        data_avaliacao = st.date_input("Data da avaliação")
+    with col5:
+        avaliador = st.text_input("Avaliador (iniciais)", key="avaliador")
 
     st.divider()
 
